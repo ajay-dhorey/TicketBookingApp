@@ -1,4 +1,4 @@
-package hello;
+package com.ticket.book.app;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,6 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
+
+import com.ticket.book.app.model.Quote;
 
 //Spring Application class
 

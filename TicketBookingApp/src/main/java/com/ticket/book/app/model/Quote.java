@@ -1,4 +1,4 @@
-package hello;
+package com.ticket.book.app.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
