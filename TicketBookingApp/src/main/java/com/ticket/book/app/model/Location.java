@@ -1,10 +1,13 @@
 package com.ticket.book.app.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -24,4 +27,7 @@ public class Location {
 	
 	@Column(name="ADDRESS", length=100)
 	private String address;
+	
+	@ManyToOne(targetEntity=Theater.class)
+	List<Theater> theaters;
 }
