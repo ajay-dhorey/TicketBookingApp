@@ -22,7 +22,49 @@ public class Theater {
 	@Column(name="THEATER_ID")
 	private long theaterId;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
+	@Column(name="ADDRESS", length=100)
+	private String address;
+	
+	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="LOC_ID")
 	private Location location;
+
+	public Theater(String address, Location location) {
+		super();
+		this.address = address;
+		this.location = location;
+	}
+	
+	@Override
+	public String toString() {
+		return "Theater [theaterId=" + theaterId + ", address=" + address + ", location=" + location + "]";
+	}
+
+	public Theater() {
+		super();
+	}
+
+	public long getTheaterId() {
+		return theaterId;
+	}
+
+	public void setTheaterId(long theaterId) {
+		this.theaterId = theaterId;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public Location getLocation() {
+		return location;
+	}
+
+	public void setLocation(Location location) {
+		this.location = location;
+	}
 }
