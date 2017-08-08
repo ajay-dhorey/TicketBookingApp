@@ -22,6 +22,9 @@ public class Theater {
 	@Column(name="THEATER_ID")
 	private long theaterId;
 	
+	@Column(name="THEATER_NAME")
+	private String theaterName;
+	
 	@Column(name="ADDRESS", length=100)
 	private String address;
 	
@@ -29,17 +32,13 @@ public class Theater {
 	@JoinColumn(name="LOC_ID")
 	private Location location;
 
-	public Theater(String address, Location location) {
+	public Theater(String name, String address, Location location) {
 		super();
+		this.theaterName=name;
 		this.address = address;
 		this.location = location;
 	}
 	
-	@Override
-	public String toString() {
-		return "Theater [theaterId=" + theaterId + ", address=" + address + ", location=" + location + "]";
-	}
-
 	public Theater() {
 		super();
 	}
@@ -50,6 +49,14 @@ public class Theater {
 
 	public void setTheaterId(long theaterId) {
 		this.theaterId = theaterId;
+	}
+
+	public String getTheaterName() {
+		return theaterName;
+	}
+
+	public void setTheaterName(String theaterName) {
+		this.theaterName = theaterName;
 	}
 
 	public String getAddress() {
