@@ -37,6 +37,10 @@ public class TheaterShows {
 	@Temporal(TemporalType.TIME)
 	@Column(name="SHOW_END_TIME")
 	private Date showEndTime;
+	
+	@Temporal(TemporalType.DATE)
+	@Column(name="SHOW_DATE",nullable=false)
+	private Date showDate;
 
 	public long getShow_id() {
 		return show_id;
@@ -76,6 +80,14 @@ public class TheaterShows {
 
 	public void setShowEndTime(Date showEndTime) {
 		this.showEndTime = showEndTime;
+	}
+
+	public Date getShowDate() {
+		return showDate;
+	}
+
+	public void setShowDate(Date showDate) {
+		this.showDate = showDate;
 	}
 		
 }
