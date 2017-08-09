@@ -47,9 +47,9 @@ public class Application {
 	public CommandLineRunner init(){
 		
 		return (args) -> {
-//			Location location1 = locationRepostiory.save(new Location("Kothrud","411008"));
-//			Theater theater1 = theaterRepostiory.save( new Theater("Krisna Colony",location1)); 
-//			Theater theater2 = theaterRepostiory.save( new Theater("Vidya Nagar",location1));
+			Location location1 = locationRepostiory.save(new Location("Kothrud","411008"));
+			Theater theater1 = theaterRepostiory.save( new Theater("Vishal Talkies","Krisna Colony",location1)); 
+			Theater theater2 = theaterRepostiory.save( new Theater("Prime Cinema","Vidya Nagar",location1));
 			
 			Location location =  locationRepostiory.findOne(1L);
 			logger.info("location found with findAll");
