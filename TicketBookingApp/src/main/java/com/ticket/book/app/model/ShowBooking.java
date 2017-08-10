@@ -17,18 +17,6 @@ public class ShowBooking {
 	@JoinColumn(name="SHOW_ID")
 	private TheaterShows theaterShow;
 	
-	
-	@Column(name="BOOKING_STATUS")
-	private BookingStatus bookingStatus;
-	
-	
-	public static enum BookingStatus{
-		BOOKED,
-		AVAILABLE,
-		NOT_AVAILABLE,
-	}
-
-
 	public TheaterShows getTheaterShow() {
 		return theaterShow;
 	}
@@ -37,27 +25,5 @@ public class ShowBooking {
 	public void setTheaterShow(TheaterShows theaterShow) {
 		this.theaterShow = theaterShow;
 	}
-
-
-	public SeatingArrangement getSeat() {
-		return seat;
-	}
-
-
-	public void setSeat(SeatingArrangement seat) {
-		this.seat = seat;
-	}
-
-
-	public BookingStatus getBookingStatus() {
-		return bookingStatus;
-	}
-
-
-	public void setBookingStatus(BookingStatus bookingStatus) {
-		this.bookingStatus = bookingStatus;
-	}
-	
-	
 	
 }

@@ -7,8 +7,5 @@ import javax.persistence.Table;
 @Entity
 @Table(name="SHOW_PRICING")
 public class ShowPricing {
-	
-	@Id
-	
 
 }
