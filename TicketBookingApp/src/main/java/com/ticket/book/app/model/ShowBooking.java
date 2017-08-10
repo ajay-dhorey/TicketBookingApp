@@ -17,11 +17,6 @@ public class ShowBooking {
 	@JoinColumn(name="SHOW_ID")
 	private TheaterShows theaterShow;
 	
-	@Id
-	@ManyToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="SEAT_ID")
-	private SeatingArrangement seat;
-	
 	
 	@Column(name="BOOKING_STATUS")
 	private BookingStatus bookingStatus;
