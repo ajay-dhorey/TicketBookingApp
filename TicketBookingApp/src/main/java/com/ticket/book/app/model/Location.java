@@ -51,13 +51,13 @@ public class Location {
 		this.pincode = pincode;
 	}
 
-	public Set<Theater> getTheaters() {
+	/*public Set<Theater> getTheaters() {
 		return theaters;
 	}
 
 	public void setTheaters(Set<Theater> theaters) {
 		this.theaters = theaters;
-	}
+	}*/
 
 	@Override
 	public String toString() {
@@ -65,8 +65,8 @@ public class Location {
 				"]";
 	}
 
-	@OneToMany(mappedBy = "location", cascade = CascadeType.ALL, fetch=FetchType.EAGER)
-	Set<Theater> theaters;
+	//@OneToMany(mappedBy = "location", cascade = CascadeType.ALL, fetch=FetchType.EAGER)
+	//Set<Theater> theaters;
 
 	public Location(String locationName, String pincode) {
 		super();

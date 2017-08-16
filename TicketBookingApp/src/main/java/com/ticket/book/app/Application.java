@@ -29,10 +29,10 @@ public class Application {
 	
 	private static final Logger logger = LoggerFactory.getLogger(Application.class);
 	
-	@Autowired
+	//@Autowired
 	private LocationRepository locationRepostiory;
 
-	@Autowired
+	//@Autowired
 	private TheaterRepository theaterRepostiory;
 	
 
@@ -43,8 +43,8 @@ public class Application {
 	}
 	
 	
-	@Bean
-	public CommandLineRunner init(){
+	//@Bean
+	/*public CommandLineRunner init(){
 		
 		return (args) -> {
 			Location location1 = locationRepostiory.save(new Location("Kothrud","411008"));
@@ -77,5 +77,5 @@ public class Application {
 			
 			
 		};
-	}	
+	}	*/
 }
